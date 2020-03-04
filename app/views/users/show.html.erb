@@ -11,3 +11,11 @@
     <% end %>
 
 <h3><%= link_to "Create A New Army", new_army_path %></h3>
+
+<% if @current_user %>
+  <%= link_to 'Logout', logout_path %>
+<% else %>
+<%= link_to 'Login', login_path %>
+<% end %>
+
+<h2><%= @current_user.name %></h2>

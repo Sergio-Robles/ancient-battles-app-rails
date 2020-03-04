@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   #   resources :armies 
   # end 
 
+
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy', as: 'logout'
+
   resources :units 
   resources :unit_types 
   
