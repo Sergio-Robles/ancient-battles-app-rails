@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/units/cavalries', to: 'units#cavalries', as: 'cavalry'
   get '/units/missiles', to: 'units#missiles', as: 'missile'
   get '/units/artilleries', to: 'units#artilleries', as: 'artillery'
+
+  get '/units/gallery', to: 'units#gallery'
   
 
   resources :units
