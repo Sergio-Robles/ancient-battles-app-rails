@@ -1,4 +1,4 @@
-cclass UsersController < ApplicationController
+class UsersController < ApplicationController
 
 before_action :current_user_exists, only: [:show]
 
@@ -22,7 +22,7 @@ end
 private 
 
 def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:current_name)
 end
 
 def require_login
