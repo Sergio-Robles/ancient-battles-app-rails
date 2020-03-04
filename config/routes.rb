@@ -11,7 +11,14 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy', as: 'logout'
 
-  resources :units 
+  get '/units/generals', to: 'units#generals', as: 'generals'
+  get '/units/infantries', to: 'units#infantries', as: 'infantry'
+  get '/units/cavalries', to: 'units#cavalries', as: 'cavalry'
+  get '/units/missiles', to: 'units#missiles', as: 'missile'
+  get '/units/artilleries', to: 'units#artilleries', as: 'artillery'
+  
+
+  resources :units
   resources :unit_types 
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

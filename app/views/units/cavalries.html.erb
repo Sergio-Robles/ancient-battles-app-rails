@@ -1,0 +1,12 @@
+<h1> Cavalry Units</h1>
+<div class="grid">
+<% @units.each do |u| %>
+<div class="grid-item">
+    <h2> <%= u.name %> </h2>
+    <h3>Size: <%= u.size %>  </h3>
+    <h3>Price: <%= u.price %>  </h3>
+    <h3>Attack stat: <%= u.attack %>  </h3>
+    <h3>Defence stat: <%= u.defence %>  </h3>
+    </div>
+<% end %>
+</div>
