@@ -14,12 +14,14 @@ class ArmyUnitsController < ApplicationController
         unit_type_artillery = UnitType.find(5) 
         @artillery_units = Unit.all.select{|u| u.unit_type == unit_type_artillery }
     end 
-
+    
     def create 
         @army_unit = ArmyUnit.create(army_unit_params)
+        
+        
         #LOOK AT NESTED ROUTING?
-        redirect_to army_unit.army 
-    end 
+        redirect_to army_unit_path
+    end
 
     def show 
         @army_unit = ArmyUnit.find(params[:id])
@@ -39,7 +41,7 @@ class ArmyUnitsController < ApplicationController
     private 
 
     def army_unit_params 
-        params.require(:army_unit).permit(:army_id, :unit_id)
+        params.require(:army_unit).permit(:army_id, :unit_ids)
     end 
 
 

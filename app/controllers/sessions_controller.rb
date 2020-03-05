@@ -8,8 +8,8 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(name: params[:name])
-
-    if user.authenticate(params[:password])
+    # byebug
+    if user && user.authenticate(params[:password])
       session[:current_user_id] = user.id
       # byebug
       redirect_to user_path(user)

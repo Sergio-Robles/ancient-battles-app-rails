@@ -12,11 +12,11 @@
     
   </head>
 
-  <body>
+  <body style="background-color:orange;">
   <nav class="navbar navbar-expand-lg navbar-dark">
 
   <!-- Navbar brand -->
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="/users/show">WarZone</a>
 
   <!-- Collapse button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -30,7 +30,7 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home
+        <a class="nav-link" href="session#destroy">Logout
           <span class="sr-only">(current)</span>
         </a>
       </li>
@@ -57,11 +57,13 @@
   <!-- Collapsible content -->
 
 </nav>
+
+    
     <div class = "container">
       <%= yield %>
     </div>
 
-  <body style="background-color:orange;">
+  
     <footer>
         <div class = "footer">
           <%= image_tag('logos/rome_logo.png') %>
@@ -72,5 +74,6 @@
 
         </div>
     </footer>
+    
   </body>
 </html>
