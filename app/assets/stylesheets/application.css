@@ -54,3 +54,16 @@
     height: 14rem;
  }
 
+.centered-pic {
+    margin-bottom: 4em;
+    margin-top: 4em;
+}
+
+.pic-army {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6em;
+    margin-bottom: 6em;
+    
+}
