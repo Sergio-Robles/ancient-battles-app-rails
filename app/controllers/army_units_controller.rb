@@ -3,22 +3,12 @@ class ArmyUnitsController < ApplicationController
 
     def new 
         @army_unit = ArmyUnit.new 
-        unit_type_general = UnitType.find(1)
-        @general_units = Unit.all.select{|u| u.unit_type == unit_type_general }
-        unit_type_infantry = UnitType.find(2)
-        @infantry_units = Unit.all.select{|u| u.unit_type == unit_type_infantry }
-        unit_type_cavalry = UnitType.find(3)
-        @cavalry_units = Unit.all.select{|u| u.unit_type == unit_type_cavalry }
-        unit_type_missile = UnitType.find(4) 
-        @missile_units = Unit.all.select{|u| u.unit_type == unit_type_missile }
-        unit_type_artillery = UnitType.find(5) 
-        @artillery_units = Unit.all.select{|u| u.unit_type == unit_type_artillery }
+        
     end 
 
     def create 
         @army_unit = ArmyUnit.create(army_unit_params)
-        #LOOK AT NESTED ROUTING?
-        redirect_to army_unit.army 
+        redirect_to army_unit(@army_unit)
     end 
 
     def show 
@@ -32,7 +22,7 @@ class ArmyUnitsController < ApplicationController
     def update 
         @army_unit = ArmyUnit.find(params[:id])
         @army_unit.update(army_unit_params)
-        # redirect_to
+        #redirect_to 
     end 
 
 

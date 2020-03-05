@@ -7,3 +7,10 @@
     <%= f.password_field :password%>
     <%= f.submit value: "Login"%>
 <% end %>
+
+<% if @current_user %>
+  <%= link_to 'Logout', logout_path %>
+<% else %>
+<%= link_to 'Login', login_path %>
+<% end %>
+

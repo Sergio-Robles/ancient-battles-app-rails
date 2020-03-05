@@ -1,9 +1,9 @@
-<h1> Welcome <%= @user.name %></h1> 
+<h1> Welcome <%= @current_user.name %></h1> 
 
 <p>“You have power over your mind - not outside events. Realize this, and you will find strength.”
 ― Marcus Aurelius, Meditations</p>
 
-<% @user.armies.each do |army| %>
+<% @current_user.armies.each do |army| %>
     <div class="army">
       <span><%= army.name %></span>
     <%= link_to "Edit", edit_army_path(army), method: :edit %> - <%= link_to "Delete", army_path(army), method: :delete, data: { confirm: "Really?" } %>
@@ -12,10 +12,3 @@
 
 <h3><%= link_to "Create A New Army", new_army_path %></h3>
 
-<% if @current_user %>
-  <%= link_to 'Logout', logout_path %>
-<% else %>
-<%= link_to 'Login', login_path %>
-<% end %>
-
-<h2><%= @current_user.name %></h2>

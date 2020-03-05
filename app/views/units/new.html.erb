@@ -1,0 +1,13 @@
+<h1> Select Your Units</h1>
+<h2>Choose your General</h2>
+<%= f.collection_select :unit_ids, @general_units, :id, :unit_stats,  {:prompt => 'General'}, {:multiple => true} %><br>
+<h2>Choose your Infantry Units</h2> 
+<%= f.collection_select :unit_ids, @infantry_units, :id, :unit_stats, {:multiple => true} %><br>
+<h2>Choose your Cavalry Units</h2> 
+<%= f.collection_select :unit_ids, @cavalry_units, :id, :unit_stats, {:multiple => true} %><br>
+<h2>Choose your Missile Unit</h2> 
+<%= f.collection_select :unit_ids, @missile_units, :id, :unit_stats, {:prompt => 'Missile'}, {:multiple => true} %><br>
+<h2>Choose your Artillery Unit</h2> 
+<%= f.collection_select :unit_ids, @artillery_units, :id, :unit_stats, {:prompt => 'Artillery'}, {:multiple => true} %><br>
+<%= f.submit %>
+<% end %> #%>

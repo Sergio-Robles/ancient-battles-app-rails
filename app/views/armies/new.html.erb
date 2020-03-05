@@ -1,14 +1,13 @@
 <%= form_for (@army) do |f| %> 
-    <h1><label> Please enter the name of your forces: </label><br></h1>
-    <%= f.text_field :name %> 
-    
-    
-
-    <%= f.submit %> 
+    <h1><label> Please enter the name of your forces: </label><br></h1>  <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :units %>
+    <%= f.collection_check_boxes(:unit_ids, Unit.all, :id, :name)%>
+    <%= f.submit %>
 <% end %>
+      
 
-
-
+   
 
     
      
