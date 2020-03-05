@@ -8,10 +8,17 @@ class ArmiesController < ApplicationController
         @army = Army.new 
     end 
 
-    def create 
-        @army = Army.create(army_params)
-        redirect_to new_army_unit_path
-    end 
+    def create
+        army = Army.create(army_params)
+        army.user_id = session[:current_user_id]
+        if army.valid?
+            army.save
+            redirect_to army_path(army)
+        else
+            flash[:errors] = army.errors.full_messages
+            redirect_to new_army_path
+        end
+    end
 
     def show 
         @army = Army.find(params[:id])
@@ -36,8 +43,8 @@ class ArmiesController < ApplicationController
     
     private 
 
-    def army_params 
-        params.require(:army).permit(:name, :user_id)
+    def army_params
+        params.require(:army).permit(:name, unit_ids: [])
     end 
 
 

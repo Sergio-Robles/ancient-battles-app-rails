@@ -60,6 +60,9 @@
 
     
     <div class = "container">
+    <% if flash[:errors] %>
+        <%= flash[:errors] %>
+      <% end %>
       <%= yield %>
     </div>
 

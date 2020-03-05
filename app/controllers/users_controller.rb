@@ -38,7 +38,9 @@ end
 private 
 
 def user_params
+
     params.require(:user).permit(:name, :password)
+
 end
 
 def require_login

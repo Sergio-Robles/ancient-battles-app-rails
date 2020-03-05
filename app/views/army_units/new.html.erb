@@ -1,17 +1,3 @@
-<h1> Select Your Units</h1>
-<%= form_for (@army_unit) do |f| %> 
-<h2>Choose your General</h2>
-<%= f.collection_select :unit_id, @general_units, :id, :unit_stats, {:prompt => 'General'} %><br>
-<h2>Choose your Infantry Units</h2> 
-<%= f.collection_select :unit_id, @infantry_units, :id, :unit_stats, {:prompt => 'Infantry'} %><br>
-<h2>Choose your Cavalry Units</h2> 
-<%= f.collection_select :unit_id, @cavalry_units, :id, :unit_stats, {:prompt => 'Mounted'} %><br>
-<h2>Choose your Missile Unit</h2> 
-<%= f.collection_select :unit_id, @missile_units, :id, :unit_stats, {:prompt => 'Missile'} %><br>
-<h2>Choose your Artillery Unit</h2> 
-<%= f.collection_select :unit_id, @artillery_units, :id, :unit_stats, {:prompt => 'Artillery'} %><br>
-<%= f.submit %>
-<% end %>  
 
 
 
