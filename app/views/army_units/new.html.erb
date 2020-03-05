@@ -2,10 +2,14 @@
 <%= form_for (@army_unit) do |f| %> 
 <h2>Choose your General</h2>
 <%= f.collection_select :unit_id, @general_units, :id, :unit_stats, {:prompt => 'General'} %><br>
+<div>
 <h2>Choose your Infantry Units</h2> 
 <%= f.collection_check_boxes :unit_id, @infantry_units, :id, :unit_stats %><br>
+</div>
+<div>
 <h2>Choose your Cavalry Units</h2> 
 <%= f.collection_check_boxes :unit_id, @cavalry_units, :id, :unit_stats %><br>
+</div>
 <h2>Choose your Missile Unit</h2> 
 <%= f.collection_select :unit_id, @missile_units, :id, :unit_stats, {:prompt => 'Missile'} %><br>
 <h2>Choose your Artillery Unit</h2> 
@@ -14,9 +18,5 @@
 <% end %>  
 
 
-<img src = "https://www.honga.net/totalwar/rome2/images/rome2/flags/rome/mon_256.png" alt = "Rome" >
-<img src = "https://www.honga.net/totalwar/rome2/images/rome2/flags/carthage/mon_256.png" alt = "Carthage" >
-<img src = "https://www.honga.net/totalwar/rome2/images/rome2/flags/seleucid/mon_256.png" alt = "Seleucid" > 
-<img src = "https://www.honga.net/totalwar/rome2/images/rome2/flags/sparta/mon_256.png" alt = "Sparta" >
-<img src = "https://www.honga.net/totalwar/rome2/images/rome2/flags/arverni/mon_256.png" alt = "Gaul" > 
+
 

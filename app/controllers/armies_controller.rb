@@ -37,7 +37,7 @@ class ArmiesController < ApplicationController
     private 
 
     def army_params 
-        params.require(:army).permit(:name, :user_id)
+        params.require(:army).permit(:name, :current_user)
     end 
 
 
