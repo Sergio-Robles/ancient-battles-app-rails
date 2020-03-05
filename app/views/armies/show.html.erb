@@ -1,5 +1,13 @@
 
 
-<h1> heyyyyy</h1> 
+<h1> Your army</h1> 
 
+<h2><%= @army.name %></h2><br>
+    <%= link_to "Edit Army", edit_army_path(@army) %>
+    <%= link_to "Delete Army", army_path(@army), method: :delete %>
 
+<% @army.units.each do |a| %> 
+    <h3><%= a.name %></h3><br> 
+<% end %> 
+
+  

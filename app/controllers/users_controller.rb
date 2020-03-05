@@ -21,12 +21,13 @@ end
 
 def edit 
     @current_user = User.find(params[:id])
+    render 'edit'
 end
 
 def update 
     @current_user = User.find(params[:id])
     @current_user.update(user_params)
-    redirect_to current_user_path(@current_user)
+    redirect_to login_path
 end
 
 def destroy

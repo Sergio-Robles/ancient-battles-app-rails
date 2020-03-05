@@ -8,6 +8,11 @@ class ArmiesController < ApplicationController
         @army = Army.new 
     end 
 
+    def show 
+        @army = Army.find(params[:id])
+        @user = @current_user
+    end
+
     def create
         army = Army.create(army_params)
         army.user_id = session[:current_user_id]
@@ -25,17 +30,18 @@ class ArmiesController < ApplicationController
     end 
 
 
-    # def edit 
-    #     @army = Army.find(params[:id])
-    #     redirect_to edit_army_unit_path
-    # end 
+    def edit 
+        @army = Army.find(params[:id])
+        # redirect_to edit_army_path
+        render 'edit'
+    end 
 
-    # def update 
-    #     @army = Army.find(params[:id])
-    #     @army.update(army_params)
+    def update 
+        @army = Army.find(params[:id])
+        @army.update(army_params)
          
         
-    # end
+    end
 
     def destroy
         Army.find(params[:id]).destroy

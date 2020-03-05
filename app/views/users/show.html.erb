@@ -9,7 +9,7 @@
 
 <h4> <% @current_user.armies.each do |a| %> </h4>
   <h5><%= link_to a.name, army_path(a) %></h5><br>
-  <%= link_to "", edit_user_path(@current_user), method: :edit %> - <%= link_to 'Delete', user_path(@current_user), method: :delete %>
+  <%= link_to "Edit", edit_user_path(@current_user) %> - <%= link_to 'Delete', user_path(@current_user), method: :delete %>
 <% end %>
 
 <br>
