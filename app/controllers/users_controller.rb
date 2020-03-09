@@ -7,7 +7,7 @@ def index
 end
 
 def new 
-    @user = User.new
+    @current_user = User.new
 end
 
 def show 
@@ -15,8 +15,8 @@ def show
 end 
 
 def create 
-    @user = User.create(user_params)
-    redirect_to user_path(@user)
+    @current_user = User.create(user_params)
+    redirect_to user_path(@current_user)
 end
 
 def edit 

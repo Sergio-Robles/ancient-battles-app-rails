@@ -1,1 +1,21 @@
-<h1>evewres</h1>
+<%= form_for (@army) do |f| %>
+    <h3><label> Edit your forces: </label><br></h3>
+    <%= f.text_field :name %>
+    
+    <h4>Choose Your General</h4>
+    <%= f.collection_check_boxes(:unit_ids, @general_units, :id, :name)%>
+
+    <h4>Choose Your Infantry Units</h4>
+    <%= f.collection_check_boxes(:unit_ids, @infantry_units, :id, :name)%>
+
+    <h4>Choose Your Mounted Units</h4>
+    <%= f.collection_check_boxes(:unit_ids, @cavalry_units, :id, :name)%>
+
+    <h4>Choose Your Missile Units</h4>
+    <%= f.collection_check_boxes(:unit_ids, @missile_units, :id, :name)%>
+
+    <h4>Choose Your Artillery Units</h4>
+    <%= f.collection_check_boxes(:unit_ids, @artillery_units, :id, :name)%>
+
+    <%= f.submit %>
+<% end %>

@@ -34,7 +34,7 @@ u5 = Unit.create(name: "Vercingetorix", size: 25, price: 1000,attack: 50, defenc
 #Infantry 
 u6 = Unit.create(name: "Roman Triarii", size: 120, price: 790,attack: 31, defence: 64, unit_type: ut2)
 u7 = Unit.create(name: "Roman Veteran Legionaries", size: 120, price: 850, attack: 59, defence: 48, unit_type: ut2)
-u8 = Unit.create(name: "Carthaginian Late Carthaginian Hoplites", size: 120, price: 650,attack: 36,defence: 51, unit_type: ut2)
+u8 = Unit.create(name: "Carthaginian Late Hoplites", size: 120, price: 650,attack: 36,defence: 51, unit_type: ut2)
 u9 = Unit.create(name: "Carthaginian Lybian Infantry", size: 120, price: 730,attack: 41,defence: 51, unit_type: ut2)
 u10 = Unit.create(name: "Seleucid Silver Shield Swordsmen", size: 120, price: 1280,attack: 43,defence: 67, unit_type: ut2)
 u11 = Unit.create(name: "Seleucid Silver Shield Pikemen", size: 120, price: 1280,attack: 44,defence: 42, unit_type: ut2)

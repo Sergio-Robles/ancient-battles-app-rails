@@ -1,11 +1,18 @@
 <%= form_for (@army) do |f| %>
-    <h1><label> Please enter the name of your forces and choose your units: </label><br></h1>  <%= f.label :name %>
+    <h3><label> Please enter the name of your forces: </label><br></h3>
     <%= f.text_field :name %>
-    <%= f.label :units %>
-    <%= f.collection_check_boxes(:unit_ids, Unit.all, :id, :name)%>
+    <h4>Choose Your General</h4>
+    <%= f.collection_check_boxes(:unit_ids, @general_units, :id, :name)%>
+    <h4>Choose Your Infantry Units</h4>
+    <%= f.collection_check_boxes(:unit_ids, @infantry_units, :id, :name)%>
+    <h4>Choose Your Mounted Units</h4>
+    <%= f.collection_check_boxes(:unit_ids, @cavalry_units, :id, :name)%>
+    <h4>Choose Your Missile Units</h4>
+    <%= f.collection_check_boxes(:unit_ids, @missile_units, :id, :name)%>
+    <h4>Choose Your Artillery Units</h4>
+    <%= f.collection_check_boxes(:unit_ids, @artillery_units, :id, :name)%>
     <%= f.submit %>
 <% end %>
-    
     
 
 

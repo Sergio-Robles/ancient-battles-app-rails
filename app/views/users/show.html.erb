@@ -4,13 +4,12 @@
 ― Marcus Aurelius, Meditations</p>
 
 <% @current_user.name%><br>
+  <%= link_to "Edit User", edit_user_path(@current_user) %> - <%= link_to 'Delete User', user_path(@current_user), method: :delete %>
 
 <h3>You have the following armies:</h3>
 
-<h4> <% @current_user.armies.each do |a| %> </h4>
-  <h5><%= link_to a.name, army_path(a) %></h5><br>
-  <%= link_to "Edit", edit_user_path(@current_user) %> - <%= link_to 'Delete', user_path(@current_user), method: :delete %>
-<% end %>
+<h4><%= @current_user.armies.name %></h4>
+
 
 <br>
 <br>
